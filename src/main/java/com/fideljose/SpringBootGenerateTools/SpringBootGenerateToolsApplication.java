@@ -1,11 +1,13 @@
 package com.fideljose.SpringBootGenerateTools;
 
+import com.fideljose.SpringBootGenerateTools.aop.TestAOP;
 import com.fideljose.SpringBootGenerateTools.lifeCycle.LoadEager;
 import com.fideljose.SpringBootGenerateTools.lifeCycle.LoadLazy;
 import com.fideljose.SpringBootGenerateTools.models.Profile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
