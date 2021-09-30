@@ -17,6 +17,6 @@ public class BeforeAspectExample {
     //@Before("execution(* com.fideljose.SpringBootGenerateTools.models.*.*(..))")
     @Before("execution(* com.fideljose.SpringBootGenerateTools.aop.TestAOP.*(..))")
     public void logBefore(){
-        log.error("Before Aspect!!!");
+        log.info("Before Aspect!!!");
     }
 }
