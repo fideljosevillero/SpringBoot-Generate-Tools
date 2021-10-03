@@ -19,8 +19,9 @@ public class BeforeAspectExample2 {
     // aspecto se ejecuta dentro del paquete 'models', * cualquien clase,
     // * cualquien metodo, (..) cualquier cantidad de parametros
     //@Before("execution(* com.fideljose.SpringBootGenerateTools.models.*.*(..))")
+    //@After("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
     //@Before("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
-    @After("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
+    @Before("ReUseJoinPoint_PointCut.reuseJoinPoint()")
     public void logBefore(JoinPoint joinPoint){
         log.warn("Info JoinPoint");
         for (Object obj : joinPoint.getArgs()) {
