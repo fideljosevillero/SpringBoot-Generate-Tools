@@ -9,16 +9,16 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-@Order(1)
-public class BeforeAspectExample {
+@Order(0)
+public class BeforeAspectExample2 {
 
-    static final Logger log = LoggerFactory.getLogger(BeforeAspectExample.class);
+    static final Logger log = LoggerFactory.getLogger(BeforeAspectExample2.class);
 
     // aspecto se ejecuta dentro del paquete 'models', * cualquien clase,
     // * cualquien metodo, (..) cualquier cantidad de parametros
     //@Before("execution(* com.fideljose.SpringBootGenerateTools.models.*.*(..))")
     @Before("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
     public void logBefore(){
-        log.warn("Before Aspect");
+        log.warn("Before Aspect 2");
     }
 }
