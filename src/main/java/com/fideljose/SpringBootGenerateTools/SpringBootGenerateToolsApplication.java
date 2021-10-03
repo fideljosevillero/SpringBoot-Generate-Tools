@@ -24,7 +24,7 @@ public class SpringBootGenerateToolsApplication {
 		LoadLazy loadLazy = context.getBean(LoadLazy.class);
 		LoadEager loadEager = context.getBean(LoadEager.class);
 		BeforeExample t = context.getBean(BeforeExample.class);
-		t.hello("Hello BeforeExample");
+		t.hello("Hello");
 		Address address = context.getBean(Address.class);
 		address.getDescription();
 	}

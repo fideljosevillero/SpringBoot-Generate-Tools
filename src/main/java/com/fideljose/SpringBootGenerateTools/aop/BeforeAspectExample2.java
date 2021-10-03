@@ -1,5 +1,7 @@
 package com.fideljose.SpringBootGenerateTools.aop;
 
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -17,8 +19,22 @@ public class BeforeAspectExample2 {
     // aspecto se ejecuta dentro del paquete 'models', * cualquien clase,
     // * cualquien metodo, (..) cualquier cantidad de parametros
     //@Before("execution(* com.fideljose.SpringBootGenerateTools.models.*.*(..))")
-    @Before("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
-    public void logBefore(){
+    //@Before("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
+    @After("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
+    public void logBefore(JoinPoint joinPoint){
+        log.warn("Info JoinPoint");
+        for (Object obj : joinPoint.getArgs()) {
+            log.warn("Arguments {}", (String)obj);
+        }
+        log.warn("kind {}", joinPoint.getKind());
+        log.warn("target {}", joinPoint.getTarget());
+        if(joinPoint.getTarget() instanceof  BeforeExample){
+            log.warn("This is BeforeExample instance");
+        }
+        log.warn("Signature {}", joinPoint.getSignature());
+        log.warn("Source Location {}", joinPoint.getSourceLocation());
+        log.warn("This {}", joinPoint.getThis());
         log.warn("Before Aspect 2");
+
     }
 }

@@ -1,5 +1,6 @@
 package com.fideljose.SpringBootGenerateTools.aop;
 
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -17,7 +18,8 @@ public class BeforeAspectExample {
     // aspecto se ejecuta dentro del paquete 'models', * cualquien clase,
     // * cualquien metodo, (..) cualquier cantidad de parametros
     //@Before("execution(* com.fideljose.SpringBootGenerateTools.models.*.*(..))")
-    @Before("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
+    //@Before("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
+    @After("execution(* com.fideljose.SpringBootGenerateTools.aop.BeforeExample.*(..))")
     public void logBefore(){
         log.warn("Before Aspect");
     }
