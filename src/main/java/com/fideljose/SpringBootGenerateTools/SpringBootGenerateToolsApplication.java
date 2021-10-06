@@ -21,12 +21,12 @@ public class SpringBootGenerateToolsApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(SpringBootGenerateToolsApplication.class, args);
-		LoadLazy loadLazy = context.getBean(LoadLazy.class);
-		LoadEager loadEager = context.getBean(LoadEager.class);
-		BeforeExample t = context.getBean(BeforeExample.class);
-		t.hello("Hello");
-		Address address = context.getBean(Address.class);
-		address.getDescription();
+//		LoadLazy loadLazy = context.getBean(LoadLazy.class);
+//		LoadEager loadEager = context.getBean(LoadEager.class);
+//		BeforeExample t = context.getBean(BeforeExample.class);
+//		t.hello("Hello");
+//		Address address = context.getBean(Address.class);
+//		address.getDescription();
 	}
 
 }
